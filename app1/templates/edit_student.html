@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>View Student Details</title>
+    </head>
+    <body>
+        <h2>Edit Student</h2>
+
+        <form method="POST">
+             {% csrf_token %}
+
+             <input type="text" name="stud_name" value="{{ student.stud_name }}"><br><br>
+             <input type="email" name="email" value="{{ student.email }}"><br><br>
+             <input type="text" name="course" value="{{ student.course }}"><br><br>
+
+             <button type="submit">Update</button>
+        </form>
+    </body>
+</html>
